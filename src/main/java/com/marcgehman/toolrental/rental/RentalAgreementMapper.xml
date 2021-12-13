@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marcgehman.toolrental.rental.RentalAgreementMapper">
+    <resultMap type="com.marcgehman.toolrental.rental.RentalAgreement" id="RentalAgreementResult" autoMapping="true">
+        <result property="rentalDays" column="rentalDays"/>
+        <result property="checkoutDate" column="checkoutDate"/>
+        <result property="dueDate" column="dueDate"/>
+        <result property="dailyRentalCharge" column="dailyRentalCharge"/>
+        <result property="chargeDays" column="chargeDays"/>
+        <result property="preDiscountCharge" column="preDiscountcharge"/>
+        <result property="discountCharge" column="discountCharge"/>
+        <result property="discountAmount" column="discountAmount"/>
+        <result property="finalCharge" column="finalCharge"/>
+        <association property="tool" javaType="com.marcgehman.toolrental.tool.Tool">
+            <result property="code" column="code"/>
+            <result property="type" column="type"/>
+            <result property="brand" column="brand"/>
+        </association>
+    </resultMap>
+</mapper>

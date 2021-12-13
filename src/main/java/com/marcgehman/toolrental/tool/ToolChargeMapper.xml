@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marcgehman.toolrental.tool.ToolChargeMapper">
+    <resultMap id="ToolChargeResult" type="com.marcgehman.toolrental.tool.ToolCharge" autoMapping="true">
+        <result property="type" javaType="com.marcgehman.toolrental.tool.ToolType" column="type"/>
+        <result property="dailyRentalCharge" column="dailyRentalCharge"/>
+        <result property="weekdayCharge" column="weekdayCharge"/>
+        <result property="weekendCharge" column="weekendCharge"/>
+        <result property="holidayCharge" column="holidayCharge"/>
+    </resultMap>
+</mapper>
